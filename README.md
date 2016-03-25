@@ -25,3 +25,4 @@ var memoize = function(f) {
 
 #### compose
 * compose 函数式编程真正强大之处在于：单个的函数可以被组合起来完成更为复杂的操作。
+* es7 decorator 就是函数式编程 compose 的一种语法糖。
