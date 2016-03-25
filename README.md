@@ -8,14 +8,14 @@
 * 纯函数是这样一种函数，即相同的输入，永远会得到相同的输出，而且没有任何可观察的副作用。
 * 追求纯函数理由: 1.可缓存 2.可移植 3.可测试 4.合理
 
-``` 缓存函数
+##### 缓存函数demo
+``` 
 var memoize = function(f) {
   var cache = {};
-
   return function() {
-    var arg_str = JSON.stringify(arguments);
-    cache[arg_str] = cache[arg_str] || f.apply(f, arguments);
-    return cache[arg_str];
+    var arg = JSON.stringify(arguments);
+    cache[arg] = cache[arg] || f.apply(f, arguments);
+    return cache[arg];
   };
 };
 ```
